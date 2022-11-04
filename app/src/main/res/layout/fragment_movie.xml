@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.movie.MovieFragment"
+    android:background="@color/blue">
+
+<!--    swip-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+<!--        scroll-->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+<!--            allLayout-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+<!--                poster-->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintDimensionRatio="5:6"
+                    android:id="@+id/poster_movie"
+                    android:scaleType="centerCrop"
+                    />
+
+<!--                gradiantPoster-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintDimensionRatio="5:6"
+                    android:background="@drawable/gradiant_main"
+                    />
+
+<!--                imdbRate-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:backgroundTint="@color/yellow"
+                    android:layout_margin="@dimen/_8cdp"
+                    app:cardCornerRadius="@dimen/_4cdp"
+
+                    >
+                    <TextView
+                        android:id="@+id/imdb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="9.6"
+                        android:textSize="@dimen/_18cdp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:paddingVertical="@dimen/_4cdp"
+                        android:paddingHorizontal="@dimen/_24cdp"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="year"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_16cdp"
+                    android:fontFamily="@font/brlnsdb"
+                    app:layout_constraintBottom_toTopOf="@id/name_movie"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="@dimen/_12cdp"
+                    android:layout_marginBottom="@dimen/_8cdp"
+                    />
+
+<!--                name-->
+                <TextView
+                    android:id="@+id/name_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/poster_movie"
+                    android:layout_marginHorizontal="@dimen/_8cdp"
+                    android:textSize="@dimen/_22cdp"
+                    tools:text="Batman The Dark Knight"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/brlnsdb"
+                    />
+
+<!--                genre/year/relased/country/type-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movie_genre_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/poster_movie"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:paddingVertical="@dimen/_18cdp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/toggle_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/movie_genre_time"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginHorizontal="@dimen/_24cdp"
+                    android:paddingBottom="@dimen/_24cdp"
+                    >
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/group_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        app:singleSelection="true">
+
+                        <Button
+                            android:id="@+id/actors"
+                            android:layout_weight="1"
+                            style="@style/MaterialButton.OutlinedButton.IconOnly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="actors"
+                            android:textColor="@color/yellow"
+                            app:icon="@drawable/ic_baseline_people_24"
+                            />
+
+                        <Button
+                            android:id="@+id/more"
+                            android:layout_weight="1"
+                            style="@style/MaterialButton.OutlinedButton.IconOnly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Details"
+                            android:textColor="@color/yellow"
+                            app:icon="@drawable/ic_baseline_read_more_24" />
+
+                        <Button
+                            android:id="@+id/posters"
+                            android:layout_weight="1"
+                            style="@style/MaterialButton.OutlinedButton.IconOnly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/yellow"
+                            android:text="Posters"
+                            app:icon="@drawable/ic_baseline_photo_library_24" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+
+                </RelativeLayout>
+
+
+<!--                Details-->
+                <RelativeLayout
+                android:id="@+id/more_rel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="5:4"
+                app:layout_constraintTop_toBottomOf="@id/toggle_buttons"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="invisible"
+                >
+
+<!--                    Main-->
+                    <TextView
+                        android:id="@+id/story"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movie Story:"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/brlnsdb"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:textSize="@dimen/_16cdp"
+                        />
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/story"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsr"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12cdp"
+                        />
+
+<!--                    awards-->
+                    <TextView
+                        android:id="@+id/awards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Awards:"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/brlnsdb"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:textSize="@dimen/_16cdp"
+                        android:layout_below="@id/details"
+                        />
+                    <TextView
+                        android:id="@+id/awards_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/awards"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsr"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12cdp"
+                        />
+
+<!--                    scores-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/awards_details"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <ImageView
+                                android:id="@+id/meta_logo"
+                                android:layout_width="@dimen/_32cdp"
+                                android:layout_height="@dimen/_32cdp"
+                                android:src="@drawable/ic_icons8_metascore"
+                                />
+
+                            <TextView
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/meta_logo"
+                                android:textSize="@dimen/_12cdp"
+                                android:fontFamily="@font/brlnsr"
+                                android:layout_marginLeft="@dimen/_8cdp"
+                                android:textColor="@color/yellow"
+                                android:layout_centerVertical="true"
+                                />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <ImageView
+                                android:id="@+id/imdb_logo"
+                                android:layout_width="@dimen/_46cdp"
+                                android:layout_height="@dimen/_32cdp"
+                                android:src="@drawable/imdb"
+                                />
+
+                            <TextView
+                                android:id="@+id/votes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/imdb_logo"
+                                android:textSize="@dimen/_12cdp"
+                                android:fontFamily="@font/brlnsr"
+                                android:layout_marginLeft="@dimen/_8cdp"
+                                android:textColor="@color/yellow"
+                                android:layout_centerVertical="true"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+
+                            <ImageView
+                                android:id="@+id/rate_logo"
+                                android:layout_width="@dimen/_32cdp"
+                                android:layout_height="@dimen/_32cdp"
+                                android:src="@drawable/filmrell"
+                                app:tint="@color/yellow" />
+
+                            <TextView
+                                android:id="@+id/rated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rate_logo"
+                                android:textSize="@dimen/_12cdp"
+                                android:fontFamily="@font/brlnsr"
+                                android:layout_marginLeft="@dimen/_8cdp"
+                                android:textColor="@color/yellow"
+                                android:layout_centerVertical="true"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+<!--                actors-->
+                <RelativeLayout
+                    android:id="@+id/actors_rel"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="5:4"
+                    app:layout_constraintTop_toBottomOf="@id/toggle_buttons"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="invisible"
+                    >
+
+<!--                    directors-->
+                    <TextView
+                        android:id="@+id/directors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Directors:"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/brlnsdb"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:textSize="@dimen/_16cdp"
+                        />
+                    <TextView
+                        android:id="@+id/directors_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/directors"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsr"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12cdp"
+                        />
+
+<!--                    writers-->
+                    <TextView
+                        android:id="@+id/writers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Writers:"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/brlnsdb"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:textSize="@dimen/_16cdp"
+                        android:layout_below="@id/directors_details"
+
+                        />
+                    <TextView
+                        android:id="@+id/writers_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/writers"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsr"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12cdp"
+                        />
+
+<!--                    actors-->
+                    <TextView
+                        android:id="@+id/actors_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/writers_details"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsdb"
+                        android:text="Actors:"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/_16cdp" />
+                    <TextView
+                        android:id="@+id/actors_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/actors_name"
+                        android:layout_margin="@dimen/_8cdp"
+                        android:fontFamily="@font/brlnsr"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12cdp"
+                        />
+
+
+                </RelativeLayout>
+
+<!--                posters-->
+                <RelativeLayout
+                    android:id="@+id/poster_rel"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="5:4"
+                    app:layout_constraintTop_toBottomOf="@id/toggle_buttons"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="invisible"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_posters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

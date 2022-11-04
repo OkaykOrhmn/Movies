@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/a"
+    >
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guid_top"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent=".15"-->
+<!--        android:orientation="horizontal"-->
+<!--        />-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guid_bottom"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent=".85"-->
+<!--        android:orientation="horizontal"-->
+<!--        />-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guid_left"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent=".15"-->
+<!--        android:orientation="vertical"-->
+<!--        />-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guid_right"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent=".85"-->
+<!--        android:orientation="vertical"-->
+<!--        />-->
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_32cdp"
+         />
+
+<!--        app:layout_constraintTop_toTopOf="@id/guid_top"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/guid_bottom"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/guid_left"-->
+<!--        app:layout_constraintRight_toRightOf="@id/guid_right"-->
+</RelativeLayout>

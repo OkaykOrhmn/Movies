@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/_4cdp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_18cdp"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/coonection"
+                app:tint="@color/red"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/brlnsr"
+                android:gravity="center"
+                android:text="Connection Error!\nPlease tryAgain."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18cdp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_18cdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_18cdp"
+                    android:layout_marginRight="@dimen/_8cdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/brlnsr"
+                    android:text="Exit"
+                    android:textColor="@color/white"
+                    app:icon="@drawable/exit"
+                    app:iconSize="@dimen/_24cdp"
+                    app:iconTint="@color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tryA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_8cdp"
+                    android:layout_marginRight="@dimen/_18cdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/brlnsr"
+                    android:text="Try"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12cdp"
+                    app:icon="@drawable/home"
+                    app:iconSize="@dimen/_24cdp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

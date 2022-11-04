@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/genre_button_off.xml" value="0.231" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/genre_button_on.xml" value="0.231" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/gradiant_card.xml" value="0.152" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/gradiant_imdb.xml" value="0.141" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/gradiant_main.xml" value="0.2235" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/drawable/ic_icons8_search_1_.xml" value="0.1" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/activity_main.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/card_movies.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/connectiom_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/drawer.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/fragment_movie.xml" value="0.2" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/fragment_splash.xml" value="0.264" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/genre.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/loading.xml" value="0.12" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/main_poster_dialog.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/poster_dialog.xml" value="0.17421875" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/posters.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/layout/slide_row.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/RHMN/Desktop/Movies/app/src/main/res/xml/fragment_loading_scene.xml" value="0.23333333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

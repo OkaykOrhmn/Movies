@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <Transition
+        motion:constraintSetStart="@id/A"
+        motion:constraintSetEnd="@+id/B"
+        motion:autoTransition="animateToEnd"
+        motion:duration="500"
+        >
+
+        <KeyFrameSet>
+
+
+        </KeyFrameSet>
+
+
+
+    </Transition>
+
+
+
+    <Transition
+        motion:constraintSetStart="@id/B"
+        motion:constraintSetEnd="@+id/C"
+        motion:autoTransition="animateToEnd"
+        motion:duration="500">
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@id/C"
+        motion:constraintSetEnd="@+id/A"
+        motion:autoTransition="jumpToEnd"
+        motion:duration="20"
+        >
+    </Transition>
+
+
+
+    <ConstraintSet android:id="@+id/A"
+        >
+        <Constraint
+            android:id="@+id/image_splash"
+            android:layout_width="@dimen/_36cdp"
+            android:layout_height="@dimen/_36cdp"
+            android:src="@drawable/filmrell"
+            motion:tint="@color/yellow"
+            android:rotation="0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/B">
+
+
+        <Constraint
+            android:id="@+id/image_splash"
+            android:layout_width="@dimen/_36cdp"
+            android:layout_height="@dimen/_36cdp"
+            android:src="@drawable/filmrell"
+            motion:tint="@color/yellow"
+            android:rotation="180"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/C">
+
+
+        <Constraint
+            android:id="@+id/image_splash"
+            android:layout_width="@dimen/_36cdp"
+            android:layout_height="@dimen/_36cdp"
+            android:src="@drawable/filmrell"
+            motion:tint="@color/yellow"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            />
+
+    </ConstraintSet>
+</MotionScene>

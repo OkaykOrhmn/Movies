@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+
+    app:layoutDescription="@xml/loading_scene">
+
+    <ImageView
+        android:id="@+id/image_splash"
+        android:layout_width="@dimen/_36cdp"
+        android:layout_height="@dimen/_36cdp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/filmrell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:tint="@color/yellow" />
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
